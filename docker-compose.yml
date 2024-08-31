@@ -6,6 +6,8 @@ services:
       args:
        - REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
     container_name: frontend
+    ports:
+      - 3003:3000
     restart: always
     
   backend:
