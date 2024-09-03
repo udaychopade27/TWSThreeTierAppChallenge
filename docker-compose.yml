@@ -30,6 +30,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - ThreeTierApp-data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -45,3 +47,5 @@ services:
     depends_on:
       - mongo
 
+volumes:
+  ThreeTierApp-data:
